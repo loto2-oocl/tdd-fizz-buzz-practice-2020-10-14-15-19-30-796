@@ -14,6 +14,10 @@ public class FizzBuzz {
         boolean multipleOfThirdSpecialNum = orderNum % THIRD_SPECIAL_NUM == 0;
 
         if (multipleOfFirstSpecialNum) {
+            if(multipleOfSecondSpecialNum && multipleOfThirdSpecialNum) {
+                return FIZZ+BUZZ+WHIZZ;
+            }
+
             if(multipleOfSecondSpecialNum) {
                 return FIZZ+BUZZ;
             }
