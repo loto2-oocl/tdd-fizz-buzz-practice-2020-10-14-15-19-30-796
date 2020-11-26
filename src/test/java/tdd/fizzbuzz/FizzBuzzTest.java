@@ -96,4 +96,18 @@ public class FizzBuzzTest {
         // then
         assertEquals("FizzWhizz", actual);
     }
+
+    @Test
+    void should_return_FizzBuzzWhizz_when_count_off_given_order_num_of_multiple_of_first_special_num_and_second_special_number_and_third_special_num() {
+        // given
+        int orderNum = 3 * 5 * 7;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        // when
+        String actual = fizzBuzz.countOff(orderNum);
+
+        // then
+        assertEquals("FizzBuzzWhizz", actual);
+    }
+
 }
