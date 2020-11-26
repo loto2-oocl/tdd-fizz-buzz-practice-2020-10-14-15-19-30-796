@@ -9,35 +9,28 @@ public class FizzBuzz {
     public static final int THIRD_SPECIAL_NUM = 7;
 
     public String countOff(int orderNum) {
+        StringBuilder result = new StringBuilder();
+
         boolean multipleOfFirstSpecialNum = orderNum % FIRST_SPECIAL_NUM == 0;
         boolean multipleOfSecondSpecialNum = orderNum % SECOND_SPECIAL_NUM == 0;
         boolean multipleOfThirdSpecialNum = orderNum % THIRD_SPECIAL_NUM == 0;
 
         if (multipleOfFirstSpecialNum) {
-            if(multipleOfSecondSpecialNum && multipleOfThirdSpecialNum) {
-                return FIZZ+BUZZ+WHIZZ;
-            }
-
-            if(multipleOfSecondSpecialNum) {
-                return FIZZ+BUZZ;
-            }
-
-            if(multipleOfThirdSpecialNum) {
-                return FIZZ+WHIZZ;
-            }
-
-            return FIZZ;
+            result.append(FIZZ);
         }
+
         if (multipleOfSecondSpecialNum) {
-            if(multipleOfThirdSpecialNum) {
-                return BUZZ+WHIZZ;
-            }
-            return BUZZ;
-        }
-        if (multipleOfThirdSpecialNum) {
-            return WHIZZ;
+            result.append(BUZZ);
         }
 
-        return String.valueOf(orderNum);
+        if (multipleOfThirdSpecialNum) {
+            result.append(WHIZZ);
+        }
+
+        if(result.length() == 0) {
+            return String.valueOf(orderNum);
+        }
+
+        return result.toString();
     }
 }
