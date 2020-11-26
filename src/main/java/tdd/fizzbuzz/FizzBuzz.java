@@ -20,6 +20,9 @@ public class FizzBuzz {
             return FIZZ;
         }
         if (multipleOfSecondSpecialNum) {
+            if(multipleOfThirdSpecialNum) {
+                return BUZZ+WHIZZ;
+            }
             return BUZZ;
         }
         if (multipleOfThirdSpecialNum) {
