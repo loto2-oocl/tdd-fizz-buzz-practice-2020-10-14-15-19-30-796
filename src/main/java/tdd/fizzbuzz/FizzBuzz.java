@@ -11,26 +11,34 @@ public class FizzBuzz {
     public String countOff(int orderNum) {
         StringBuilder result = new StringBuilder();
 
-        boolean multipleOfFirstSpecialNum = orderNum % FIRST_SPECIAL_NUM == 0;
-        boolean multipleOfSecondSpecialNum = orderNum % SECOND_SPECIAL_NUM == 0;
-        boolean multipleOfThirdSpecialNum = orderNum % THIRD_SPECIAL_NUM == 0;
-
-        if (multipleOfFirstSpecialNum) {
+        if (this.isMultipleOfFirstSpecialNumber(orderNum)) {
             result.append(FIZZ);
         }
 
-        if (multipleOfSecondSpecialNum) {
+        if (this.isMultipleOfSecondSpecialNumber(orderNum)) {
             result.append(BUZZ);
         }
 
-        if (multipleOfThirdSpecialNum) {
+        if (this.isMultipleOfThirdSpecialNumber(orderNum)) {
             result.append(WHIZZ);
         }
 
-        if(result.length() == 0) {
+        if (result.length() == 0) {
             return String.valueOf(orderNum);
         }
 
         return result.toString();
+    }
+
+    private boolean isMultipleOfFirstSpecialNumber(int orderNum) {
+        return orderNum % FIRST_SPECIAL_NUM == 0;
+    }
+
+    private boolean isMultipleOfSecondSpecialNumber(int orderNum) {
+        return orderNum % SECOND_SPECIAL_NUM == 0;
+    }
+
+    private boolean isMultipleOfThirdSpecialNumber(int orderNum) {
+        return orderNum % THIRD_SPECIAL_NUM == 0;
     }
 }
