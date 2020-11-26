@@ -43,4 +43,17 @@ public class FizzBuzzTest {
         // then
         assertEquals("Buzz", actual);
     }
+
+    @Test
+    void should_return_Whizz_when_count_off_given_order_num_of_multiple_of_third_special_num() {
+        // given
+        int orderNum = 7;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        // when
+        String actual = fizzBuzz.countOff(orderNum);
+
+        // then
+        assertEquals("Whizz", actual);
+    }
 }
