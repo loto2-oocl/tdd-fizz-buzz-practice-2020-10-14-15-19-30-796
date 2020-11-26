@@ -17,6 +17,11 @@ public class FizzBuzz {
             if(multipleOfSecondSpecialNum) {
                 return FIZZ+BUZZ;
             }
+
+            if(multipleOfThirdSpecialNum) {
+                return FIZZ+WHIZZ;
+            }
+
             return FIZZ;
         }
         if (multipleOfSecondSpecialNum) {
