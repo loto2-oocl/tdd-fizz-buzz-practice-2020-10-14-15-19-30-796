@@ -9,15 +9,19 @@ public class FizzBuzz {
     public static final int THIRD_SPECIAL_NUM = 7;
 
     public String countOff(int orderNum) {
-        if (orderNum % FIRST_SPECIAL_NUM == 0) {
+        boolean multipleOfFirstSpecialNum = orderNum % FIRST_SPECIAL_NUM == 0;
+        boolean multipleOfSecondSpecialNum = orderNum % SECOND_SPECIAL_NUM == 0;
+        boolean multipleOfThirdSpecialNum = orderNum % THIRD_SPECIAL_NUM == 0;
+
+        if (multipleOfFirstSpecialNum) {
             return FIZZ;
         }
 
-        if (orderNum % SECOND_SPECIAL_NUM == 0) {
+        if (multipleOfSecondSpecialNum) {
             return BUZZ;
         }
 
-        if (orderNum % THIRD_SPECIAL_NUM == 0) {
+        if (multipleOfThirdSpecialNum) {
             return WHIZZ;
         }
 
